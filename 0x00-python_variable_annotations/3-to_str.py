@@ -2,6 +2,7 @@
 '''Modules of task-3.
 '''
 
+
 def to_str(n: float) -> str:
     '''Takes a float and returns its string representation
     '''
