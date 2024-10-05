@@ -3,13 +3,16 @@
 '''
 
 
-from typing import Sequence, Any, Optional, Mapping, TypeVar, Union
-
+from typing import Mapping, Any, TypeVar, Union, Optional
 
 T = TypeVar('T')
 
-def safely_get_value(dct: Mapping[Any, Any], key: Any, default: Union[T, None]) -> Optional[Union[Any, T]]:
-    '''Properly Annotated
+def safely_get_value(
+    dct: Mapping,  
+    key: Any, 
+    default: Union[T, None] = None
+) -> Union[Any, T]:
+    '''Safely gets a value from the mapping or returns a default value.
     '''
     if key in dct:
         return dct[key]
